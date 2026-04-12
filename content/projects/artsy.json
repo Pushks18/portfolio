@@ -1,0 +1,12 @@
+{
+  "slug": "artsy",
+  "title": "Artsy App",
+  "description": "Full-stack art discovery and curation platform deployed on Google Cloud.",
+  "status": "DEPLOYED",
+  "year": 2024,
+  "tech": ["React", "Node.js", "Express", "MongoDB", "GCP"],
+  "github": "https://github.com/pushks18",
+  "live": "",
+  "screenshot": "",
+  "longDescription": "A full-stack application for art discovery and curation built with React, Node.js, Express, and MongoDB. Deployed on Google Cloud App Engine for scalable, production-grade hosting."
+}

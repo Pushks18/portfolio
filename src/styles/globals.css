@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-space-deep: #0A0E1A;
+  --color-space-panel: #111827;
+  --color-space-console: #1E293B;
+  --color-amber-primary: #F59E0B;
+  --color-cyan-accent: #06B6D4;
+  --color-status-green: #22C55E;
+  --color-text-light: #E2E8F0;
+  --color-text-muted: #94A3B8;
+  --color-text-dim: #475569;
+
+  --font-heading: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-space-deep);
+  color: var(--color-text-light);
+  font-family: var(--font-body);
+}
+
+/* Scanline overlay effect for cards */
+.scanline-overlay {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(245, 158, 11, 0.03) 2px,
+    rgba(245, 158, 11, 0.03) 4px
+  );
+}
+
+/* Glitch keyframes for page transitions */
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+/* Typewriter cursor blink */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}

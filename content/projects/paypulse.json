@@ -1,0 +1,12 @@
+{
+  "slug": "paypulse",
+  "title": "PayPulse",
+  "description": "Peer-to-peer payment platform with Stripe integration and encrypted session management.",
+  "status": "DEPLOYED",
+  "year": 2025,
+  "tech": ["Node.js", "Stripe", "JWT", "AES", "PostgreSQL"],
+  "github": "https://github.com/pushks18",
+  "live": "",
+  "screenshot": "",
+  "longDescription": "A peer-to-peer payment platform featuring Stripe integration, idempotent retries, transactional locks, and JWT-based authentication with AES-encrypted sessions for secure payment processing."
+}

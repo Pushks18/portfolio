@@ -1,0 +1,12 @@
+{
+  "slug": "campusconnect",
+  "title": "CampusConnect USC",
+  "description": "Full-stack student networking and course discussion platform for verified USC students.",
+  "status": "DEPLOYED",
+  "year": 2026,
+  "tech": ["Next.js", "Prisma", "Supabase", "Google OAuth", "GraphQL"],
+  "github": "https://github.com/pushks18",
+  "live": "",
+  "screenshot": "",
+  "longDescription": "A full-stack student networking and course discussion platform built exclusively for verified USC students. Features Google OAuth authentication, real-time course discussions, student profiles, and a GraphQL API layer powered by Prisma and Supabase."
+}
