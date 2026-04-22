@@ -8,7 +8,7 @@ export const EDUCATION: EducationEntry[] = [
     startDate: "2025-01",
     currentlyAttending: false,
     endDate: "2026-12",
-    gpa: "3.70 / 4.00",
+    gpa: "3.6 / 4.00",
   },
   {
     school: "University of Mumbai",
@@ -23,30 +23,30 @@ export const EDUCATION: EducationEntry[] = [
 
 export const EXPERIENCE: JobEntry[] = [
   {
-    jobTitle: "Research Assistant",
-    company: "Computational Neuroscience Lab, USC",
+    jobTitle: "Software Engineer Intern – Real-Time AI Systems",
+    company: "USC",
     location: "Los Angeles, CA",
     startDate: "2025-11",
     currentlyWorkHere: true,
-    description: "- Designing a multi-camera vision pipeline for assistive navigation\n- Benchmarking transformer models (Mask2Former, DETR)\n- Integrating Depth Anything V2 for depth estimation\n- Curating a 12K-frame indoor dataset in COCO format",
+    description: "- Built a real-time SLAM pipeline combining monocular VO and depth estimation, achieving ~20–25 FPS on noisy indoor data\n- Implemented keyframe selection and pose graph optimization, reducing drift to <0.8 m ATE over ~100 m trajectories\n- Integrated depth-based reconstruction to improve spatial consistency and reduce scale drift across long sequences\n- Debugged sensor noise, calibration drift, and VO failures, improving tracking stability and reducing dropouts by ~30%\n- Collected and validated multi-modal datasets, ensuring temporal alignment and robustness for downstream pipelines",
   },
   {
-    jobTitle: "ML Intern",
+    jobTitle: "Software Engineer Intern – AI & Computer Vision",
     company: "YMT Medical",
     location: "India",
     startDate: "2024-01",
     currentlyWorkHere: false,
     endDate: "2024-08",
-    description: "- Built computer vision pipeline for skin lesion detection using YOLOv8n\n- Improved detection stability and reduced inference latency\n- GPU optimization and clinical feedback loops\n- Worked with domain experts to refine model outputs",
+    description: "- Engineered computer vision pipelines for image quality enhancement and denoising, improving robustness of AI-driven diagnostics\n- Trained and fine-tuned YOLOv8n on 2K dermatology images, supporting model validation and performance testing\n- Enhanced GPU inference and integrated clinical feedback to improve model interpretability and reduce latency by 40%\n- Designed evaluation pipelines to measure model performance, interpretability, and latency tradeoffs in production-like settings\n- Worked closely with domain experts to refine model outputs and reduce failure cases in real clinical data",
   },
   {
-    jobTitle: "Software Developer",
+    jobTitle: "Software Engineer Intern – Backend & APIs",
     company: "Technoriya ERP Solution",
     location: "India",
     startDate: "2023-10",
     currentlyWorkHere: false,
     endDate: "2023-12",
-    description: "- Led backend redesign with Firebase Cloud Functions\n- Optimized REST APIs and Firestore queries\n- Streamlined deployments via Vercel and GitHub Actions\n- Implemented secure authentication protocols",
+    description: "- Developed and optimized backend services and APIs using Python and Node.js, supporting scalable data pipelines and cloud-based deployment\n- Implemented secure authentication and access protocols via Firebase Auth and Firestore rules to ensure data integrity\n- Optimized RESTful APIs and Firestore queries to achieve 450 ms response times under 1,000 concurrent requests\n- Streamlined deployment workflows using Vercel and GitHub Actions to improve delivery consistency and reliability",
   },
 ];
 
@@ -72,11 +72,13 @@ export const LINKS = {
 };
 
 export const CONFERENCES = [
+  "Southern California Blockchain Conference (SCBC) 2026",
   "Participated in SWE (Society of Women Engineers) Conference 2025",
   "Presented blockchain paper at ICSCSS 2023",
 ];
 
 export const ACHIEVEMENTS = [
+  "Built AgentPay at Southern California Blockchain Hackathon (SCBC) 2026",
   "Won Syrus 2023 Hackathon",
   "Shortlisted for SIH 2023 Hackathon",
   "Shortlisted for IndeHub 2025 Hackathon",

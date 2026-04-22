@@ -20,9 +20,9 @@ export function Projects({ projects }: ProjectsProps) {
         {projects.map((project) => (
           <Link key={project.slug} href={`/projects/${project.slug}`}>
             <ScanlineCard>
-              <div className="h-36 bg-gradient-to-br from-space-deep to-space-console flex items-center justify-center border-b border-white/5">
+              <div className="h-36 bg-gradient-to-br from-space-deep to-space-console flex items-center justify-center border-b border-white/5 overflow-hidden">
                 {project.screenshot ? (
-                  <img src={project.screenshot} alt={project.title} className="w-full h-full object-cover" />
+                  <img src={project.screenshot} alt={project.title} className="w-full h-full object-contain object-center" />
                 ) : (
                   <span className="font-mono text-xs text-text-dim">[PROJECT SCREENSHOT]</span>
                 )}

@@ -7,6 +7,6 @@
   "tech": ["FastAPI", "Hugging Face", "BART", "Zero-Shot", "React"],
   "github": "https://github.com/pushks18",
   "live": "https://info-distill.vercel.app/",
-  "screenshot": "",
+  "screenshot": "/images/projects/infodistill.png",
   "longDescription": "An AI-powered research summarization platform featuring an agentic pipeline built on FastAPI and Hugging Face models (BART, zero-shot classification). Automates tech article extraction, classification, and summarization from multiple sources."
 }
