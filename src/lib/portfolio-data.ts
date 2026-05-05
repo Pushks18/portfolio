@@ -23,7 +23,7 @@ export const EDUCATION: EducationEntry[] = [
 
 export const EXPERIENCE: JobEntry[] = [
   {
-    jobTitle: "Software Engineer Intern – Real-Time AI Systems",
+    jobTitle: "Research Engineer",
     company: "USC",
     location: "Los Angeles, CA",
     startDate: "2025-11",

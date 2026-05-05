@@ -7,28 +7,41 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return getResearchPapers().map((p) => ({ slug: p.slug }));
+  return getResearchPapers().map((paper) => ({ slug: paper.slug }));
 }
 
 export default async function ResearchPage({ params }: Props) {
   const { slug } = await params;
   const paper = getResearchPaper(slug);
+
   if (!paper) notFound();
 
   return (
-    <div className="max-w-3xl mx-auto px-6 py-24">
-      <Link href="/#research" className="font-mono text-xs text-text-muted hover:text-amber-primary transition-colors mb-8 inline-block">
-        ← BACK TO TRANSMISSIONS
+    <main className="mx-auto max-w-3xl px-5 py-16 md:px-8 md:py-24">
+      <Link href="/" className="text-link text-sm">
+        ← Back
       </Link>
-      <div className="font-mono text-[10px] text-cyan-accent tracking-[1px] mb-2">{paper.venue} // {paper.year}</div>
-      <h1 className="font-heading text-4xl font-bold text-text-light mb-4">{paper.title}</h1>
-      <p className="text-sm text-text-muted mb-2">{paper.authors.join(", ")}</p>
-      <p className="text-text-muted leading-relaxed mb-8">{paper.abstract || paper.description}</p>
-      {paper.link && (
-        <a href={paper.link} target="_blank" className="px-4 py-2 bg-cyan-accent text-space-deep font-mono text-xs tracking-[1px] font-bold hover:bg-cyan-accent/90 transition-colors">
-          VIEW PUBLICATION →
-        </a>
-      )}
-    </div>
+
+      <article className="panel mt-8 p-8 md:p-10">
+        <div className="text-sm text-muted">
+          {paper.venue} · {paper.year}
+        </div>
+        <h1 className="mt-4 text-4xl font-semibold tracking-[-0.06em] text-foreground md:text-5xl">
+          {paper.title}
+        </h1>
+        <p className="mt-5 text-base leading-8 text-copy">{paper.authors.join(", ")}</p>
+        <p className="mt-6 text-base leading-8 text-copy">
+          {paper.abstract || paper.description}
+        </p>
+
+        {paper.link ? (
+          <div className="mt-10">
+            <a className="button-primary" href={paper.link} target="_blank" rel="noreferrer">
+              View publication
+            </a>
+          </div>
+        ) : null}
+      </article>
+    </main>
   );
 }

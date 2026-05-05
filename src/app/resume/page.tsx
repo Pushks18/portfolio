@@ -1,47 +1,116 @@
 import Link from "next/link";
-import { EDUCATION, EXPERIENCE, SKILLS, LINKS } from "@/lib/portfolio-data";
+import { EDUCATION, EXPERIENCE, SKILLS } from "@/lib/portfolio-data";
+
+function formatMonth(value?: string) {
+  if (!value) return "";
+
+  const [year, month] = value.split("-");
+  const date = new Date(Number(year), Number(month) - 1);
+
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    year: "numeric",
+  }).format(date);
+}
+
+function getBullets(description: string) {
+  return description
+    .split("\n")
+    .map((line) => line.replace(/^-+\s*/, "").trim())
+    .filter(Boolean);
+}
 
 export default function ResumePage() {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-24">
-      <Link href="/#resume" className="font-mono text-xs text-text-muted hover:text-amber-primary transition-colors mb-8 inline-block">
-        ← BACK TO MISSION CONTROL
+    <main className="mx-auto max-w-4xl px-5 py-16 md:px-8 md:py-24">
+      <Link href="/" className="text-link text-sm">
+        ← Back to home
       </Link>
-      <div className="font-mono text-[10px] text-amber-primary tracking-[1px] mb-2">CLASSIFIED // FULL PERSONNEL FILE</div>
-      <h1 className="font-heading text-4xl font-bold text-text-light mb-8">
-        Pushkaraj Baradkar — Dossier
-      </h1>
-      <section className="mb-8">
-        <h2 className="font-mono text-xs text-amber-primary tracking-[1px] mb-4 pb-2 border-b border-amber-primary/10">EDUCATION</h2>
-        {EDUCATION.map((edu, i) => (
-          <div key={i} className="mb-3">
-            <div className="text-text-light font-medium">{edu.degree} {edu.fieldOfStudy}</div>
-            <div className="text-sm text-text-muted">{edu.school} — GPA {edu.gpa} — {edu.startDate} to {edu.endDate}</div>
-          </div>
-        ))}
-      </section>
-      <section className="mb-8">
-        <h2 className="font-mono text-xs text-amber-primary tracking-[1px] mb-4 pb-2 border-b border-amber-primary/10">MISSION HISTORY</h2>
-        {EXPERIENCE.map((job, i) => (
-          <div key={i} className="mb-4">
-            <div className="text-text-light font-medium">{job.jobTitle}</div>
-            <div className="text-sm text-cyan-accent">{job.company}</div>
-            <div className="text-xs text-text-dim mb-1">{job.startDate} — {job.currentlyWorkHere ? "Present" : job.endDate}</div>
-            <div className="text-sm text-text-muted leading-relaxed whitespace-pre-line">{job.description}</div>
-          </div>
-        ))}
-      </section>
-      <section className="mb-8">
-        <h2 className="font-mono text-xs text-amber-primary tracking-[1px] mb-4 pb-2 border-b border-amber-primary/10">SYSTEMS</h2>
-        <div className="flex flex-wrap gap-2">
-          {SKILLS.map((skill) => (
-            <span key={skill} className="px-2 py-1 bg-cyan-accent/10 border border-cyan-accent/20 rounded text-xs text-cyan-accent font-mono">{skill}</span>
-          ))}
+
+      <section className="panel mt-8 p-8 md:p-10">
+        <p className="section-kicker">Resume</p>
+        <h1 className="mt-4 text-4xl font-semibold tracking-[-0.06em] text-foreground md:text-5xl">
+          Pushkaraj Baradkar
+        </h1>
+
+        <div className="mt-10 grid gap-10">
+          <section>
+            <h2 className="text-2xl font-semibold tracking-[-0.04em] text-foreground">
+              Education
+            </h2>
+            <div className="mt-5 grid gap-4">
+              {EDUCATION.map((education) => (
+                <article key={`${education.school}-${education.endDate}`} className="rounded-2xl border border-border bg-surface p-5">
+                  <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
+                    <div>
+                      <h3 className="text-lg font-medium text-foreground">
+                        {education.degree} in {education.fieldOfStudy}
+                      </h3>
+                      <p className="mt-1 text-copy">{education.school}</p>
+                    </div>
+                    <div className="text-sm text-muted">
+                      {formatMonth(education.startDate)} - {formatMonth(education.endDate)}
+                    </div>
+                  </div>
+                  <p className="mt-3 text-sm text-copy">GPA: {education.gpa}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold tracking-[-0.04em] text-foreground">
+              Experience
+            </h2>
+            <div className="mt-5 grid gap-4">
+              {EXPERIENCE.map((job) => (
+                <article key={`${job.company}-${job.startDate}`} className="rounded-2xl border border-border bg-surface p-5">
+                  <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
+                    <div>
+                      <h3 className="text-lg font-medium text-foreground">{job.jobTitle}</h3>
+                      <p className="mt-1 text-copy">{job.company}</p>
+                    </div>
+                    <div className="text-sm text-muted md:text-right">
+                      <div>{job.location}</div>
+                      <div>
+                        {formatMonth(job.startDate)} -{" "}
+                        {job.currentlyWorkHere ? "Present" : formatMonth(job.endDate)}
+                      </div>
+                    </div>
+                  </div>
+                  <ul className="mt-4 grid gap-3 text-base leading-7 text-copy">
+                    {getBullets(job.description).map((bullet) => (
+                      <li key={bullet} className="flex gap-3">
+                        <span className="mt-3 h-1.5 w-1.5 rounded-full bg-accent" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold tracking-[-0.04em] text-foreground">
+              Skills
+            </h2>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {SKILLS.map((skill) => (
+                <span key={skill} className="tag">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </section>
+        </div>
+
+        <div className="mt-10">
+          <a href="/resume.pdf" download className="button-primary">
+            Download PDF
+          </a>
         </div>
       </section>
-      <a href="/resume.pdf" download className="inline-block px-6 py-2.5 bg-amber-primary text-space-deep font-mono text-xs tracking-[1px] font-bold hover:bg-amber-primary/90 transition-colors">
-        DOWNLOAD PDF
-      </a>
-    </div>
+    </main>
   );
 }
