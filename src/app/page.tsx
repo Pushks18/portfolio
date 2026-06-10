@@ -49,7 +49,7 @@ export default function Home() {
           Pushkaraj Baradkar
         </h1>
         <p className="mt-1 text-[17px] leading-tight text-black">
-          Research engineer at <span className="link-underline">USC</span>
+          AI engineer at <span className="link-underline">Tabhi</span>
         </p>
       </header>
 
