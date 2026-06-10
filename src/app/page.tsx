@@ -51,15 +51,18 @@ export default function Home() {
         <p className="mt-1 text-[17px] leading-tight text-black">
           AI engineer at <span className="link-underline">Tabhi</span>
         </p>
+        <a
+          href="mailto:pushkarajbaradkar1@gmail.com"
+          className="mt-1 block text-[17px] leading-tight text-[#9b9b9b] link-underline hover:text-black"
+        >
+          pushkarajbaradkar1@gmail.com
+        </a>
       </header>
 
       <nav
-        className="fade-in mt-12 flex gap-6 text-[17px] text-[#9b9b9b]"
+        className="fade-in mt-12 flex items-center gap-6 text-[17px] text-[#9b9b9b]"
         style={{ animationDelay: `${NAV_DELAY}ms` }}
       >
-        <a href={`mailto:${LINKS.email}`} className="link-underline hover:text-black">
-          Email
-        </a>
         <a
           href={LINKS.github}
           target="_blank"
