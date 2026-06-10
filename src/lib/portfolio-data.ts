@@ -23,6 +23,14 @@ export const EDUCATION: EducationEntry[] = [
 
 export const EXPERIENCE: JobEntry[] = [
   {
+    jobTitle: "AI Engineer Intern",
+    company: "Tabhi",
+    location: "Austin, TX",
+    startDate: "2026-05",
+    currentlyWorkHere: true,
+    description: "- Built a TurboVec index retrieval + Two-Tower recommendation system serving 300K+ users with less than 100ms latency\n- Architected a Two-Tower ranking pipeline using 100+ behavioral and graph features, improving Recall@100 and NDCG@10 by ~18%\n- Implemented evaluation frameworks using Recall@K, NDCG, and MRR to benchmark retrieval and ranking models\n- Automated evaluation and benchmarking across 10+ ranking and grading metrics, accelerating experimentation by ~3×\n- Engineered CLIP-based embeddings for places, restaurants, and experiences, supporting retrieval across 500K+ items",
+  },
+  {
     jobTitle: "Research Engineer",
     company: "USC",
     location: "Los Angeles, CA",
