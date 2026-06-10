@@ -31,13 +31,13 @@ export const EXPERIENCE: JobEntry[] = [
     description: "- Built a TurboVec index retrieval + Two-Tower recommendation system serving 300K+ users with less than 100ms latency\n- Architected a Two-Tower ranking pipeline using 100+ behavioral and graph features, improving Recall@100 and NDCG@10 by ~18%\n- Implemented evaluation frameworks using Recall@K, NDCG, and MRR to benchmark retrieval and ranking models\n- Automated evaluation and benchmarking across 10+ ranking and grading metrics, accelerating experimentation by ~3×\n- Engineered CLIP-based embeddings for places, restaurants, and experiences, supporting retrieval across 500K+ items",
   },
   {
-    jobTitle: "Research Engineer",
+    jobTitle: "Software Engineer Intern – Real-Time AI Systems",
     company: "USC",
     location: "Los Angeles, CA",
     startDate: "2025-11",
     currentlyWorkHere: false,
     endDate: "2026-05",
-    description: "- Built a real-time SLAM pipeline combining monocular VO and depth estimation, achieving ~20–25 FPS on noisy indoor data\n- Implemented keyframe selection and pose graph optimization, reducing drift to <0.8 m ATE over ~100 m trajectories\n- Integrated depth-based reconstruction to improve spatial consistency and reduce scale drift across long sequences\n- Debugged sensor noise, calibration drift, and VO failures, improving tracking stability and reducing dropouts by ~30%\n- Collected and validated multi-modal datasets, ensuring temporal alignment and robustness for downstream pipelines",
+    description: "- Built a real-time SLAM pipeline combining monocular VO and depth estimation, achieving ~20–25 FPS on noisy indoor data\n- Implemented RANSAC-based feature matching (2500 matches, 2000 inliers), leveraging IMU to improve motion consistency under noise\n- Resolved scale ambiguity using sparse depth and fused VO with GPS in GTSAM, reducing trajectory error from ~95 m to ~1.2 m ATE\n- Debugged sensor noise, calibration drift, and VO failures, improving tracking stability and reducing dropouts by ~30%",
   },
   {
     jobTitle: "Software Engineer Intern – AI & Computer Vision",
