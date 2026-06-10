@@ -35,7 +35,8 @@ export const EXPERIENCE: JobEntry[] = [
     company: "USC",
     location: "Los Angeles, CA",
     startDate: "2025-11",
-    currentlyWorkHere: true,
+    currentlyWorkHere: false,
+    endDate: "2026-05",
     description: "- Built a real-time SLAM pipeline combining monocular VO and depth estimation, achieving ~20–25 FPS on noisy indoor data\n- Implemented keyframe selection and pose graph optimization, reducing drift to <0.8 m ATE over ~100 m trajectories\n- Integrated depth-based reconstruction to improve spatial consistency and reduce scale drift across long sequences\n- Debugged sensor noise, calibration drift, and VO failures, improving tracking stability and reducing dropouts by ~30%\n- Collected and validated multi-modal datasets, ensuring temporal alignment and robustness for downstream pipelines",
   },
   {
