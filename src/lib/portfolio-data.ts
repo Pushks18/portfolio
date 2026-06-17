@@ -48,15 +48,6 @@ export const EXPERIENCE: JobEntry[] = [
     endDate: "2024-08",
     description: "- Engineered computer vision pipelines for image quality enhancement and denoising, improving robustness of AI-driven diagnostics\n- Trained and fine-tuned YOLOv8n on 2K dermatology images, supporting model validation and performance testing\n- Enhanced GPU inference and integrated clinical feedback to improve model interpretability and reduce latency by 40%\n- Designed evaluation pipelines to measure model performance, interpretability, and latency tradeoffs in production-like settings\n- Worked closely with domain experts to refine model outputs and reduce failure cases in real clinical data",
   },
-  {
-    jobTitle: "Software Engineer Intern – Backend & APIs",
-    company: "Technoriya ERP Solution",
-    location: "India",
-    startDate: "2023-10",
-    currentlyWorkHere: false,
-    endDate: "2023-12",
-    description: "- Developed and optimized backend services and APIs using Python and Node.js, supporting scalable data pipelines and cloud-based deployment\n- Implemented secure authentication and access protocols via Firebase Auth and Firestore rules to ensure data integrity\n- Optimized RESTful APIs and Firestore queries to achieve 450 ms response times under 1,000 concurrent requests\n- Streamlined deployment workflows using Vercel and GitHub Actions to improve delivery consistency and reliability",
-  },
 ];
 
 export const SKILLS: string[] = [
