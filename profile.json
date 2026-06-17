@@ -30,13 +30,13 @@
       "description": "- Built a real-time vision pipeline for object detection, OCR, and semantic classification, achieving 18–22 FPS on CPU-only inference.\n- Implemented visual odometry and SLAM with sub-meter drift over ~100 m indoor trajectories for consistent spatial mapping.\n- Designed a topological semantic memory that reduced repeated scene re-identification by ~40% across long video sequences.\n- Enabled open-vocabulary scene understanding using region proposals with lightweight classifier heads beyond fixed COCO classes.\n- Optimized lightweight detection models for embedded deployment, achieving a 30–35% FPS improvement over baseline."
     },
     {
-      "jobTitle": "Machine Learning Engineer Intern (Applied AI)",
-      "company": "YMT Medical, India",
+      "jobTitle": "Software Engineer – Backend & AI Infrastructure",
+      "company": "Technoriya ERP Solution, India",
       "location": "India",
-      "startDate": "2024-01",
+      "startDate": "2023-10",
       "currentlyWorkHere": false,
-      "endDate": "2024-08",
-      "description": "- Engineered computer vision pipelines for image quality enhancement and denoising, improving robustness of AI-driven diagnostics.\n- Trained and fine-tuned YOLOv8n on 2K dermatology images, supporting model validation and performance testing.\n- Enhanced GPU inference and integrated clinical feedback to enhance model interpretability and reduce latency by 40%.\n- Designed evaluation pipelines to measure model performance, interpretability, and latency tradeoffs in production-like settings.\n- Worked closely with domain experts to refine model outputs and reduce failure cases in real clinical data."
+      "endDate": "2023-12",
+      "description": "- Developed and optimized backend services and APIs using Python and Node.js, supporting scalable data pipelines, system reliability, cloud-based deployment and processing layers for downstream analytics and ML workflows.\n- Implemented secure authentication and access protocols via Firebase Auth and Firestore rules to ensure data integrity.\n- Optimized RESTful APIs and Firestore queries to achieve 450 ms response times under 1,000 concurrent requests for ML integration.\n- Streamlined deployment workflows using Vercel and GitHub Actions to improve delivery consistency and reliability."
     }
   ],
   "educationData": [

@@ -40,13 +40,13 @@ export const EXPERIENCE: JobEntry[] = [
     description: "- Built a real-time SLAM pipeline combining monocular VO and depth estimation, achieving ~20–25 FPS on noisy indoor data\n- Implemented RANSAC-based feature matching (2500 matches, 2000 inliers), leveraging IMU to improve motion consistency under noise\n- Resolved scale ambiguity using sparse depth and fused VO with GPS in GTSAM, reducing trajectory error from ~95 m to ~1.2 m ATE\n- Debugged sensor noise, calibration drift, and VO failures, improving tracking stability and reducing dropouts by ~30%",
   },
   {
-    jobTitle: "Software Engineer Intern – AI & Computer Vision",
-    company: "YMT Medical",
+    jobTitle: "Software Engineer Intern – Backend & APIs",
+    company: "Technoriya ERP Solution",
     location: "India",
-    startDate: "2024-01",
+    startDate: "2023-10",
     currentlyWorkHere: false,
-    endDate: "2024-08",
-    description: "- Engineered computer vision pipelines for image quality enhancement and denoising, improving robustness of AI-driven diagnostics\n- Trained and fine-tuned YOLOv8n on 2K dermatology images, supporting model validation and performance testing\n- Enhanced GPU inference and integrated clinical feedback to improve model interpretability and reduce latency by 40%\n- Designed evaluation pipelines to measure model performance, interpretability, and latency tradeoffs in production-like settings\n- Worked closely with domain experts to refine model outputs and reduce failure cases in real clinical data",
+    endDate: "2023-12",
+    description: "- Developed and optimized backend services and APIs using Python and Node.js, supporting scalable data pipelines and cloud-based deployment\n- Implemented secure authentication and access protocols via Firebase Auth and Firestore rules to ensure data integrity\n- Optimized RESTful APIs and Firestore queries to achieve 450 ms response times under 1,000 concurrent requests\n- Streamlined deployment workflows using Vercel and GitHub Actions to improve delivery consistency and reliability",
   },
 ];
 
