@@ -8,7 +8,7 @@ export const EDUCATION: EducationEntry[] = [
     startDate: "2025-01",
     currentlyAttending: false,
     endDate: "2026-12",
-    gpa: "3.6 / 4.00",
+    gpa: "3.73 / 4.00",
   },
   {
     school: "University of Mumbai",
@@ -28,7 +28,7 @@ export const EXPERIENCE: JobEntry[] = [
     location: "Austin, TX",
     startDate: "2026-05",
     currentlyWorkHere: true,
-    description: "- Built a TurboVec index retrieval + Two-Tower recommendation system serving 300K+ users with less than 100ms latency\n- Architected a Two-Tower ranking pipeline using 100+ behavioral and graph features, improving Recall@100 and NDCG@10 by ~18%\n- Implemented evaluation frameworks using Recall@K, NDCG, and MRR to benchmark retrieval and ranking models\n- Automated evaluation and benchmarking across 10+ ranking and grading metrics, accelerating experimentation by ~3×\n- Engineered CLIP-based embeddings for places, restaurants, and experiences, supporting retrieval across 500K+ items",
+    description: "- Architected an end-to-end personalized discovery feed (retrieve → rank → re-rank) for a 188K-item catalog using hybrid Elasticsearch BM25 and vector retrieval with slot-based re-ranking\n- Designed a recency-decayed user preference model to personalize retrieval and support future Two-Tower and SASRec ranking\n- Reduced cold-feed latency from 8s to <500 ms via three-tier caching, cache pre-warming, optimized indexing, and geospatial retrieval\n- Built recommendation analytics using RudderStack to capture user behavior and optimize personalization through engagement metrics\n- Resolved ES-MongoDB data consistency issues and hardened location-aware retrieval, improving feed and recommendation reliability\n- Engineered the recommendation architecture to support future Two-Tower and SASRec models",
   },
   {
     jobTitle: "Software Engineer Intern – Real-Time AI Systems",
@@ -46,7 +46,7 @@ export const EXPERIENCE: JobEntry[] = [
     startDate: "2023-10",
     currentlyWorkHere: false,
     endDate: "2023-12",
-    description: "- Developed and optimized backend services and APIs using Python and Node.js, supporting scalable data pipelines and cloud-based deployment\n- Implemented secure authentication and access protocols via Firebase Auth and Firestore rules to ensure data integrity\n- Optimized RESTful APIs and Firestore queries to achieve 450 ms response times under 1,000 concurrent requests\n- Streamlined deployment workflows using Vercel and GitHub Actions to improve delivery consistency and reliability",
+    description: "- Developed Python and Node.js backend services and APIs supporting scalable data pipelines and cloud-based ML workflows\n- Implemented secure authentication and access protocols via Firebase Auth and Firestore rules to ensure data integrity\n- Optimized RESTful APIs and Firestore queries to achieve 450 ms response times under 1,000 concurrent requests for ML integration\n- Streamlined deployment workflows using Vercel and GitHub Actions to improve delivery consistency and reliability",
   },
 ];
 
